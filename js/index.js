@@ -71,12 +71,14 @@ var searchTimer = window.setInterval(function () {
             DOM.getByClassName("logoBoard")[0].style.display = "block";
             var light = document.getElementById("light");
             light.style.height = (document.documentElement.offsetHeight || document.body.offsetHeight) + "px";
+        DOM.getByClassName("wxLogo")[0].style.display="none";
+        DOM.getByClassName("qqLogo")[0].style.display="block";
+        DOM.addClass(document.getElementById("tabOne"),"optionSelectQQ");
+        DOM.removeClass(document.getElementById("tabTwo"),"optionSelectWx");
     }
     logoClose.onclick = function () {
         DOM.getByClassName("logoBoard")[0].style.display = "none";
         light.style.height = "0";
-        DOM.getByClassName("wxLogo")[0].style.display="none";
-        DOM.getByClassName("qqLogo")[0].style.display="block";
     };
     function leftClick() {
         var defaultLeft = parseFloat(DOM.getCss(oUlSmall, "left"));
